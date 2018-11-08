@@ -3,21 +3,19 @@
 spring:
   application:
     name:  microservicecloud-config
-
+spring:
+  profiles: 
+    active: 
+    - jyddev
   
 ---
 spring:
-  profiles:
-  #znwdev\znwprod\jyddev\jydprod\zxdev\zxprod
-    active:
-    - jyddev
+  profiles: jyddev
+  
   application:
     name: microservicecloud-edge-dev
 ---
 spring:
-  profiles:
-  #znwdev\znwprod\jyddev\jydprod\zxdev\zxprod
-    active:
-    - jydprod
+  profiles: jydprod
   application:
     name: microservicecloud-edge-prod
