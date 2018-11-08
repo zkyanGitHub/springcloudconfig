@@ -1,1 +1,23 @@
-﻿
+﻿server: 
+  port: 9901  
+spring:
+  application:
+    name:  microservicecloud-config
+
+  
+---
+spring:
+  profiles:
+  #znwdev\znwprod\jyddev\jydprod\zxdev\zxprod
+    active:
+    - jyddev
+  application:
+    name: microservicecloud-edge-dev
+---
+spring:
+  profiles:
+  #znwdev\znwprod\jyddev\jydprod\zxdev\zxprod
+    active:
+    - jydprod
+  application:
+    name: microservicecloud-edge-prod
