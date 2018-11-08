@@ -1,0 +1,9 @@
+﻿server: 
+  port: 9906  
+spring:
+  application:
+    name:  microservicecloud-config-test
+  profiles: 
+    active: 
+    - test
+  
