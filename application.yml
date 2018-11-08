@@ -3,7 +3,6 @@
 spring:
   application:
     name:  microservicecloud-config
-spring:
   profiles: 
     active: 
     - jyddev
