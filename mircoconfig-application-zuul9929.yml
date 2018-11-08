@@ -1,0 +1,27 @@
+﻿server: 
+  port: 9929
+
+ 
+eureka: 
+  client: 
+    service-url: 
+      #      defaultZone: http://eureka9910.com:9910/eureka/,http://eureka9911.com:9911/eureka/,http://eureka9912.com:9912/eureka/ 
+      defaultZone: http://eureka9910.com:9910/eureka/
+  instance:
+    instance-id: gateway-9929.com
+    prefer-ip-address: true 
+ 
+ 
+zuul: 
+  #ignored-services: microservicecloud-dept
+  prefix: /neutron
+  ignored-services: "*"
+  routes: 
+    edge.serviceId: microservicecloud-edge
+    edge.path: /edge/**
+ 
+info: 
+  app.name: neutron-Edge
+  company.name: www.neutron.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
