@@ -1,0 +1,40 @@
+﻿server:
+  port: 9931
+  
+
+#debug: true
+
+#spring: 
+#  application:
+#    name: feign-zxEdge-client
+
+
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+  messages:
+    basename: message
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+#      defaultZone: http://eureka9910.com:9910/eureka/,http://eureka9911.com:9911/eureka/,http://eureka9912.com:9912/eureka/ 
+      defaultZone: http://eureka9910.com:9910/eureka/
+ 
+
+feign: 
+  hystrix: 
+    enabled: true
+
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full  
+
