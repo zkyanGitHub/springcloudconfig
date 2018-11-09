@@ -1,7 +1,7 @@
 ﻿server:
   port: 9910
  
-
+ss: abc
 eureka:
   instance:
     hostname: eureka9910.com 
